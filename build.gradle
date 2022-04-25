@@ -1,0 +1,22 @@
+plugins {
+    id 'pub.ihub.plugin'
+}
+
+subprojects {
+    apply {
+        plugin 'pub.ihub.plugin.ihub-java'
+        plugin 'pub.ihub.plugin.ihub-test'
+        plugin 'pub.ihub.plugin.ihub-verification'
+    }
+
+    dependencies {
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+}
+
+iHubGitHooks {
+    hooks = [
+        'pre-commit': './gradlew build',
+        'commit-msg': './gradlew commitCheck'
+    ]
+}

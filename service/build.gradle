@@ -1,0 +1,5 @@
+description = '服务模块'
+
+dependencies {
+    implementation 'org.springframework:spring-context'
+}

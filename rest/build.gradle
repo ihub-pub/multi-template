@@ -1,0 +1,17 @@
+description = '应用模块'
+
+apply {
+    plugin 'pub.ihub.plugin.ihub-boot'
+}
+
+dependencies {
+    implementation project(':demo-client')
+    implementation project(':demo-service')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+iHubVerification {
+    jacocoInstructionCoveredRatio = '0.5'
+    // 忽略启动类所在包路径测试覆盖率检查
+    jacocoPackageExclusion = 'pub.ihub.demo.rest'
+}
