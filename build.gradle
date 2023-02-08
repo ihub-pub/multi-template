@@ -1,5 +1,11 @@
 plugins {
     id 'pub.ihub.plugin'
+    id 'pub.ihub.plugin.ihub-git-hooks'
+    id 'pub.ihub.plugin.ihub-java' apply false
+    id 'pub.ihub.plugin.ihub-test' apply false
+    id 'pub.ihub.plugin.ihub-verification' apply false
+    id 'pub.ihub.plugin.ihub-publish' apply false
+    id 'pub.ihub.plugin.ihub-boot' apply false
 }
 
 subprojects {

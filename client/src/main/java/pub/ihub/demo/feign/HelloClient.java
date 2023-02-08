@@ -18,7 +18,7 @@ public interface HelloClient {
 	 *
 	 * @return hello
 	 */
-	@GetMapping
+	@GetMapping("hello")
 	String hello();
 
 }

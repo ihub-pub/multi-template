@@ -30,7 +30,7 @@ class HelloControllerTest {
 	@Test
 	void hello() {
 		try {
-			mockMvc.perform(get("/")).andDo(MockMvcResultHandlers.print()).andExpect(status().isOk());
+			mockMvc.perform(get("/hello")).andDo(MockMvcResultHandlers.print()).andExpect(status().isOk());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
